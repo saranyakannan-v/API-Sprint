@@ -4,14 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>API Sprint</title>
 </head>
 
 <body>
-    <div id="api">
-        <button id="data"> Click to see the API data</button>
+    <h1>API Sprint</h1>
+    <div id="results">
+        <div id="catResult" class="result">
+            <p>Random Cat Placeholder</p>
+        </div>
+        <div id="dogResult" class="result">
+            <p>Random Dog Placeholder</p>
+        </div>
     </div>
+    <div class="buttons">
+        <button id="catBtn">Get Cat</button>
+        <button id="dogBtn">Get Dog</button>
+    </div>
+    <script src="index.js"></script>
 </body>
-<script src="index.js"></script>
 
 </html>
