@@ -1,5 +1,5 @@
 body {
-    background-image: url(images/catdog.jpg);
+    background-image: url("../API-Sprint/images/catdog.jpg");
     /* background-color: rgba(255, 192, 203, 0.76); */
     font-family: 'Times New Roman', Times, serif;
     display: flex;
