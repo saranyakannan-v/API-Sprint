@@ -3,32 +3,39 @@ const dogResult = document.getElementById("dogResult");
 const catBtn = document.getElementById("catBtn");
 const dogBtn = document.getElementById("dogBtn");
 
-catBtn.addEventListener("click", getRandomCat)
-dogBtn.addEventListener("click", getRandomDog)
+catBtn.addEventListener("click", function() {
+    getRandomCat()
+})
+dogBtn.addEventListener("click", function() {
+    getRandomDog()
+})
 
 function getRandomCat() {
 
     fetch("https://aws.random.cat/meow")
         .then(res => res.json())
         .then(data => {
-            catResult.innerHTML = '<img src ="${data.file}"/>'
+            console.log(data.file)
+            document.getElementById("catResult").innerHTML = `<img src ="${data.file}"/>`
+
         })
-    console.log(data)
-        .catch(error => {
-            console.log("error!!!");
-            console.log(error);
-        });
+
+    .catch(error => {
+        console.log("error!!!");
+        console.log(error);
+    });
 }
 
 function getRandomDog() {
     fetch("https://random.dog/woof.json")
         .then(res => res.json())
         .then(data => {
-            dogResult.innerHTML = '<img src ="${data.fileSizeBytes.url}"/>'
+            console.log(data.url)
+            document.getElementById("dogResult").innerHTML = `<img src ="${data.url}"/>`
         })
-    console.log(data)
-        .catch(error => {
-            console.log("error!!!");
-            console.log(error);
-        });
+
+    .catch(error => {
+        console.log("error!!!");
+        console.log(error);
+    });
 }
